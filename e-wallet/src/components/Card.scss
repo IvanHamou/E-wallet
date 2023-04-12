@@ -1,0 +1,57 @@
+.Card{
+    background-color: #FFAE34;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+
+    &Top{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    &Info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-family: 'PT Mono';
+    }
+
+    &Number{
+        font-style: normal;
+        font-size: 29px;
+        line-height: 32px;
+        letter-spacing: 0.03em;
+        font-weight: 400;
+    }
+
+    &InfoRest{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    &InfoRest p{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 13px;
+        letter-spacing: 0em;
+        color: #000000CC;
+    }
+
+    &InfoRest h5{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;        
+    }
+
+    &Validity{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
