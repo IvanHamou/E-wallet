@@ -1,8 +1,7 @@
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-
-import Registration from './views/Registration';
-import Account from './views/Account';
+import Home from './views/Home';
+import AddCard from './views/AddCard';
 
 const router = createBrowserRouter([
   {
