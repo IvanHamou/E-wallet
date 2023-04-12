@@ -1,5 +1,37 @@
+.Home{
+    padding: 1rem;
+
+    &Active{
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        text-align: center;
+        color: #22222299;
+        margin: 0.5rem;
+    }
+}
+
 .mainContent{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
+}
+
+main{
+    margin: 2.5rem 0;
+}
+
+.Home button{
+    font-family: PT Mono;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    border: 1px #000000 solid;
+    background-color: transparent;
+    border-radius: 8px;
 }
