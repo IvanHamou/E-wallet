@@ -1,0 +1,31 @@
+.cardStack{
+    position: relative;
+
+    &Card:nth-child(1){
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+    }
+
+    &Card:nth-child(2){
+        position: absolute;
+        top: 2.5rem;
+        left: 0;
+        width: 100%;
+
+    }
+    
+    &Card:nth-child(3){
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+
+    }
+}
+  
+  //.cardStackCard:not(:first-child) {
+  //  margin-top: 2.5rem;
+  //}

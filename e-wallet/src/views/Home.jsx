@@ -1,4 +1,5 @@
 import Card from '../components/Card'
+import CardStack from '../components/CardStack'
 import Top from '../components/Top'
 import './Home.scss'
 
@@ -9,7 +10,10 @@ export default function Home() {
         <Top />
         <main>
             <p>ACTIVE CARD</p>
-            <Card />
+            <div className='mainContent'>
+                <Card />
+                <CardStack />
+            </div>
         </main>
     </section>
   )
