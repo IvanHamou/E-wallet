@@ -1,10 +1,10 @@
 import './Top.scss'
 
-export default function Top() {
+export default function Top(props) {
 
   return (
     <header className='top'>
-        <h1>E-WALLET</h1>
+        <h1>{props.title}</h1>
     </header>
   )
 }

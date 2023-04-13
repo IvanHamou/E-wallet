@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <section className='Home'>
-        <Top />
+        <Top title= "E-WALLET"/>
         <main>
             <p className='HomeActive'>ACTIVE CARD</p>
             <div className='mainContent'>
