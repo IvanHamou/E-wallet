@@ -1,0 +1,44 @@
+.cardForm {
+
+    & form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &Double{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &Double div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &Double input{
+        width: 100%;
+    }
+
+    & label{
+        font-family: PT Mono;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 13px;
+        text-align: left;
+    }
+
+    & input, & select{
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+        padding: 1rem 0.5rem;
+        font-family: PT Mono;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+}

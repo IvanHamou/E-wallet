@@ -9,18 +9,23 @@ export default function CardForm() {
             <input type="text" />
             <label htmlFor="cardFormHolder">CARDHOLDER NAME</label>
             <input type="text" />
-            <div>
-                <label htmlFor="cardFormValidity">VALID THRU</label>
-                <input type="text" />
-                <label htmlFor="cardFormCCV">CCV</label>
-                <input type="text" />
+            <div className="cardFormDouble">
+                <div>
+                    <label htmlFor="cardFormValidity">VALID THRU</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label htmlFor="cardFormCCV">CCV</label>
+                    <input type="text" />
+                </div>
             </div>
-            <div className="cardFormDropdown">
-                <img src="\src\assets\vendor-bitcoin.svg" alt="bitcoinIcon" />
-                <img src="\src\assets\vendor-blockchain.svg" alt="blockchainIcon" />
-                <img src="\src\assets\vendor-evil.svg" alt="evilIcon" />
-                <img src="\src\assets\vendor-ninja.svg" alt="ninjaIcon" />
-            </div>
+            <label htmlFor="cardFormVendor">VENDOR</label>
+            <select className="cardFormDropdown">
+                <option value="bitcoin">BITCOIN INC</option>
+                <option value="ninjabank">NINJA BANK</option>
+                <option value="blockchain">BLOCK CHAIN INC</option>
+                <option value="evilcorp">EVIL CORP</option>
+            </select>
         </form>
       </section>
     )

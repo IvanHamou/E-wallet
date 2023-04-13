@@ -1,0 +1,31 @@
+.addCard{
+    padding: 1rem;
+
+    & main{
+        margin: 2rem 0;
+    }
+
+    &New{
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        text-align: center;
+        color: #22222299;
+        margin: 0.5rem;
+    }
+
+    & button{
+            font-family: PT Mono;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 25px;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+            color: #FFFFFF;
+            background-color: #000000;
+            border-radius: 8px;
+    }
+}
