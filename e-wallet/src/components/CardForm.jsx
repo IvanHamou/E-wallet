@@ -1,9 +1,9 @@
 import { useState } from "react"
 import Card from '../components/Card'
 import "./CardForm.scss"
-import { useNavigate } from "react-router-dom"
 
 export default function CardForm(props) {
+
 
     const[cardNumber, setCardNumber] = useState(props.cardNumber || "")
     const[cardHolder, setCardHolder] = useState(props.cardHolder)
@@ -11,8 +11,8 @@ export default function CardForm(props) {
 
     function handleCardNumberInp(e) {
         let inputValue = e.target.value
-        inputValue = inputValue.replace(/\D/g, ''); // Only allow digits (0-9)
-        inputValue = inputValue.match(/.{1,4}/g)?.join(' '); // Add spaces every 4 characters
+        inputValue = inputValue.replace(/\D/g, '');
+        inputValue = inputValue.match(/.{1,4}/g)?.join(' ');
         props.updateCardNumber(inputValue)
         setCardNumber(inputValue || '');
     }
@@ -28,12 +28,7 @@ export default function CardForm(props) {
         setcardValidity(inputValue || '');
     }
 
-    const navigate = useNavigate()
-    function handleClick() {
-        navigate('/')
-        console.log("afsdfsd");
-       // return <Card cardNumber={ cardNumber } cardHolder={cardHolder} cardValidity={cardValidity} color={color}/> 
-    }
+
 
     function handleChange(e) {
         if (e.target.value === "bitcoin") {
@@ -88,7 +83,7 @@ export default function CardForm(props) {
                 <option value="blockchain">BLOCK CHAIN INC</option>
                 <option value="evilcorp">EVIL CORP</option>
             </select>
-            <button onClick={ handleClick }>ADD CARD</button>
+            <button type="submit" onClick={props.onClick}>ADD CARD</button>
         </form>
       </section>
     )
