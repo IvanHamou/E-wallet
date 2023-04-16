@@ -4,20 +4,14 @@ import Top from '../components/Top'
 import './Home.scss'
 import { useNavigate } from "react-router-dom"
 import { useSelector } from 'react-redux';
+import { useState } from 'react'
 
 
 export default function Home() {
 
     const cards = useSelector((state) => state.cards);
 
-    const cardChip = useSelector((state) => state.cardChip);
-    const cardVendor = useSelector((state) => state.cardVendor);
-    const cardNumber = useSelector((state) => state.cardNumber);
-    const cardHolder = useSelector((state) => state.cardHolder);
-    const cardValidity = useSelector((state) => state.cardValidity);
-    const color = useSelector((state) => state.color);
-    const textColor = useSelector((state) => state.textColor);
-
+    const [activeCard, setActiveCard] = useState(cards[0]);
 
     const navigate = useNavigate()
     function handleClick() {
@@ -32,15 +26,15 @@ export default function Home() {
             <p className='HomeActive'>ACTIVE CARD</p>
             <div className='mainContent'>
                 <Card             
-                    cardChip={cardChip}
-                    cardVendor={cardVendor}
-                    cardNumber={cardNumber}
-                    cardHolder={cardHolder}
-                    cardValidity={cardValidity}
-                    color={color}
-                    textColor={textColor}
+                    cardChip={activeCard.cardChip}
+                    cardVendor={activeCard.cardVendor}
+                    cardNumber={activeCard.cardNumber}
+                    cardHolder={activeCard.cardHolder}
+                    cardValidity={activeCard.cardValidity}
+                    color={activeCard.color}
+                    textColor={activeCard.textColor}
                 />
-                <CardStack />
+                <CardStack setActiveCard={setActiveCard}/>
             </div>
         </main>
         <button onClick={ handleClick }>ADD A NEW CARD</button>
