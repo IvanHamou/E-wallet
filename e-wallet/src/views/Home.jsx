@@ -8,7 +8,8 @@ import { useSelector } from 'react-redux';
 
 export default function Home() {
 
-    //const theCardThing = useSelector((state) => { return state.theCardThing });
+    const cards = useSelector((state) => state.cards);
+
     const cardChip = useSelector((state) => state.cardChip);
     const cardVendor = useSelector((state) => state.cardVendor);
     const cardNumber = useSelector((state) => state.cardNumber);
@@ -16,6 +17,7 @@ export default function Home() {
     const cardValidity = useSelector((state) => state.cardValidity);
     const color = useSelector((state) => state.color);
     const textColor = useSelector((state) => state.textColor);
+
 
     const navigate = useNavigate()
     function handleClick() {

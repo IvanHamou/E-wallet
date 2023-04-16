@@ -3,12 +3,7 @@ import Card from '../components/Card'
 import CardForm from '../components/CardForm'
 import Top from '../components/Top'
 import './AddCard.scss'
-import { updateCardNumber } from "../actions/cardAction";
-import { updateCardChip } from "../actions/cardAction";
-import { updateCardValidity } from "../actions/cardAction";
-import { updateCardVendor } from "../actions/cardAction";
-import { updateColor } from "../actions/cardAction";
-import { updateTextColor } from "../actions/cardAction";
+import { addCard } from "../actions/cardAction";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux'
 
@@ -29,12 +24,18 @@ export default function AddCard(props) {
     function func(event) {
         event.preventDefault()
         navigate('/')
-        dispatch(updateColor(color))
-        dispatch(updateTextColor(textColor))
-        dispatch(updateCardChip(cardChip))
-        dispatch(updateCardVendor(cardVendor))
-        dispatch(updateCardNumber(cardNumber))
-        dispatch(updateCardValidity(cardValidity))
+
+        const newCard = {
+            cardChip: cardChip,
+            cardVendor: cardVendor,
+            cardHolder: cardHolder,
+            cardNumber: cardNumber,
+            cardValidity: cardValidity,
+            color: color,
+            textColor: textColor
+        }
+
+        dispatch(addCard(newCard))
     }
 
 
