@@ -35,8 +35,10 @@ export default function AddCard(props) {
             textColor: textColor
         }
 
+
         dispatch(addCard(newCard))
     }
+
 
 
 

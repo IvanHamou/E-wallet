@@ -6,7 +6,7 @@ export default function CardForm(props) {
 
 
     const[cardNumber, setCardNumber] = useState(props.cardNumber || "")
-    const[cardHolder, setCardHolder] = useState(props.cardHolder)
+    const[cardHolder, setCardHolder] = useState(props.cardHolder || "")
     const[cardValidity, setcardValidity] = useState(props.cardValidity || "")
 
     function handleCardNumberInp(e) {
@@ -18,7 +18,9 @@ export default function CardForm(props) {
     }
 
     function handleCardHolderInp(e) {
-        props.updateCardHolder(e.target.value.toUpperCase())
+        const inputValue = e.target.value.toUpperCase().replace(/[^A-Z]/g, '');
+        props.updateCardHolder(inputValue);
+        setCardHolder(inputValue || '');
     }
 
     function handleCardValidityInp(e) {

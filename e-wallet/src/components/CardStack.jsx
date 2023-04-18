@@ -11,7 +11,7 @@ export default function CardStack(props) {
   return (
     <section className='cardStack' >
         {cards.map((card, index) => (
-        <article className='cardStackCard' key={index} onClick={() => props.setActiveCard(card)}> 
+        <article className='cardStackCard' key={index} style={{top: `${2.5 + (index * 2.5)}rem`}} onClick={() => props.setActiveCard(card)} > 
             <Card             
                 cardChip={card.cardChip}
                 cardVendor={card.cardVendor}

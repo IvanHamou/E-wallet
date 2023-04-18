@@ -3,7 +3,7 @@ import "./Card.scss"
 export default function Card(props) {
 
     return (
-      <section className="Card" style={{ backgroundColor: props.color, color: props.textColor }}>
+      <section className="Card" style={{ backgroundColor: props.color, color: props.textColor  }}>
         <article className="CardTop">
             <div>
                 <img src={props.cardChip} alt="chipIcon" />

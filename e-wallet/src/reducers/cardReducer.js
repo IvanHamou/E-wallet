@@ -19,6 +19,7 @@ const initialState = {
       },
 
     ],
+
   };
 
   const cardReducer = (state = initialState, action) => {
