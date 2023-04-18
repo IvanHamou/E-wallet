@@ -47,7 +47,7 @@ export default function AddCard(props) {
         <Top title= "ADD A NEW BANK CARD"/>
         <main>            
             <p className='addCardNew'>NEW CARD</p>
-            <div className='mainContent'>
+            <div className='addCardMainContent'>
                 <Card cardChip={ cardChip } cardVendor={cardVendor} cardNumber={cardNumber} cardHolder={cardHolder} cardValidity={cardValidity} color={color} textColor={textColor}/>
                 <CardForm onClick={func} updateCardChip= { setCardChip } updateCardVendor={ setCardVendor } updateCardNumber={ setCardNumber } updateCardHolder={ setCardHolder } updateCardValidity={ setCardValidity } updateColor={ setColor } updateTextColor={ setTextColor }/>
             </div>
