@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Card from './Card'
 import './CardStack.scss'
 import { useSelector } from 'react-redux';

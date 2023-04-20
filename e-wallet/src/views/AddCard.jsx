@@ -15,7 +15,7 @@ export default function AddCard(props) {
     const[cardNumber, setCardNumber] = useState("XXXX XXXX XXXX XXXX")
     const[cardHolder, setCardHolder] = useState("FIRSTNAME LASTNAME")
     const[cardValidity, setCardValidity] = useState("MM/YY")
-    const[color, setColor] = useState("#D0D0D0")
+    const[color, setColor] = useState("#FFAE34")
     const[textColor, setTextColor] = useState("black")
 
     const dispatch = useDispatch();
